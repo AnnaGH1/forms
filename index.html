@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Forms">
+    <title>Forms</title>
+</head>
+<body>
+    <form action="#" method="POST" enctype="multipart/form-data" name="feedback" class="form">
+        <fieldset class="form__fieldset">
+            <legend class="form__title">Feedback form</legend>
+            <div class="form__name-tel-wrapper">
+                <div class="form__field-wrapper">
+                    <label class="visually-hidden" for="name-fdb">Name</label>
+                    <input class="form__field js-field" type="text" name="name" id="name-fdb" placeholder="Your name" required>
+                    <span class="form__msg message message--error">Enter your name</span>
+                    <span class="form__msg message message--success"></span>
+                </div>
+                <div class="form__field-wrapper">
+                    <label class="visually-hidden" for="tel-fdb">Phone</label>
+                    <input class="form__field js-field js-tel" type="tel" name="tel" id="tel-fdb" placeholder="Your phone number" pattern="\+1\([0-9]{3}\)-[0-9]{3}-[0-9]{4}" required>
+                    <span class="form__msg message message--error">Enter your phone number</span>
+                    <span class="form__msg message message--success"></span>
+                </div>
+            </div>
+            <div class="form__field-wrapper form__field-wrapper--textarea">
+                <label class="visually-hidden" for="message-fdb">Message</label>
+                <textarea class="form__field js-field form__field--textarea" name="message" id="message-fdb" cols="30" rows="10" placeholder="Your message" required></textarea>
+                <span class="form__msg message message--error">Enter your message</span>
+                <span class="form__msg message message--success"></span>
+            </div>
+            <div class="form__field-wrapper form__field-wrapper--file upload">
+                <label class="form__label" for="file-fdb">Attachment:</label>
+                <div class="upload__wrapper" data-note="Upload" tabindex="0">
+                    <span class="upload__path">No file chosen</span>
+                    <input class="form__field upload__input" type="file" name="file" id="file-fdb" tabindex="-1">
+                </div>
+            </div>
+            <button class="form__btn" type="submit">Send</button>
+        </fieldset>
+    </form>
+</body>
+</html>
