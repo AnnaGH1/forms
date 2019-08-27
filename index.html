@@ -7,6 +7,30 @@
     <title>Forms</title>
 </head>
 <body>
+    <h1>Forms</h1>
+    <form action="#" method="post" enctype="multipart/form-data" name="subscription" class="form">
+        <h2>Subscription form</h2>
+        <div class="form__field-wrapper">
+            <label class="visually-hidden" for="name-sub">Name</label>
+            <input class="form__field" type="text" name="name" id="name-sub" placeholder="Name" required>
+        </div>
+        <div class="form__field-wrapper">
+            <label class="visually-hidden" for="email-sub">Email</label>
+            <input class="form__field" type="email" name="email" id="email-sub" placeholder="Email" required>
+        </div>
+        <fieldset class="form__fieldset">
+            <legend>Receive promotions</legend>
+            <div class="form__field-wrapper">
+                <label class="visually-hidden" for="frequency-daily">daily</label>
+                <input class="form__field" type="radio" name="frequency" id="frequency-daily" value="daily">
+                <label class="visually-hidden" for="frequency-weekly">weekly</label>
+                <input class="form__field" type="radio" name="frequency" id="frequency-weekly" value="weekly">
+                <label class="visually-hidden" for="frequency-monthly">monthly</label>
+                <input class="form__field" type="radio" name="frequency" id="frequency-monthly" value="monthly">
+            </div>
+        </fieldset>
+        <button class="form__btn" type="submit">Send</button>
+    </form>
     <form action="#" method="POST" enctype="multipart/form-data" name="feedback" class="form">
         <fieldset class="form__fieldset">
             <legend class="form__title">Feedback form</legend>
