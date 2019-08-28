@@ -1,0 +1,51 @@
+{
+  "name": "forms",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "stylelint": "stylelint src/sass/**/*.scss",
+    "test": "npm run editorconfig && npm run stylelint",
+    "eslint": "eslint src/js/**/*.js",
+    "clean": "gulp clean",
+    "build": "gulp build",
+    "start": "gulp build && gulp live-serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnaGH1/forms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnnaGH1/forms/issues"
+  },
+  "homepage": "https://github.com/AnnaGH1/forms#readme",
+  "dependencies": {
+    "inputmask": "^4.0.8",
+    "jquery": "^3.4.1",
+    "parsleyjs": "^2.9.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "eslint": "^6.2.2",
+    "eslint-config-htmlacademy": "^0.5.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "node-sass": "^4.12.0",
+    "stylelint": "^10.1.0",
+    "stylelint-config-htmlacademy": "^0.1.4"
+  }
+}
