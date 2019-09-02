@@ -1,0 +1,35 @@
+body {
+  position: relative;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  min-width: $width-min;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}

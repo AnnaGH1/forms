@@ -1,0 +1,28 @@
+.container {
+  margin: 0 auto;
+  max-width: $width-max-content;
+}
+
+@media screen and (min-width: $bp-small) {
+  .container {
+    //outline: 2px solid lime;
+  }
+}
+
+@media screen and (min-width: $bp-medium) {
+  .container {
+    //outline: 2px solid magenta;
+  }
+}
+
+@media screen and (min-width: $bp-large) {
+  .container {
+    //outline: 2px solid blue;
+  }
+}
+
+@media screen and (min-width: $bp-xlarge) {
+  .container {
+    //outline: 2px solid red;
+  }
+}

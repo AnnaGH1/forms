@@ -1,0 +1,20 @@
+.btn {
+  box-sizing: border-box;
+  padding: 14px 22px;
+  font-size: 18px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $green;
+  border: 1px solid $green;
+  cursor: pointer;
+  transition-property: border, background-color;
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+
+  &:focus,
+  &:hover {
+    background-color: $green-dark;
+    border: 1px solid $green-dark;
+  }
+}
