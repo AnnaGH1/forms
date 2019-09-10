@@ -33,3 +33,10 @@ img {
   overflow: hidden;
   border: 0;
 }
+
+.no-scroll {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}

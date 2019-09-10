@@ -1,0 +1,67 @@
+.send-msg {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 14;
+  display: none;
+  width: 90%;
+  color: $light-blue;
+  background-color: $white;
+  border-radius: 10px;
+
+  &--open {
+    display: block;
+  }
+
+  &__btn-wrapper {
+    display: flex;
+  }
+
+  &__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 16px;
+    height: 16px;
+    font-size: 0;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  &__content {
+    padding: 20px;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+    line-height: 1;
+    color: $light-blue;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin: 0;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1;
+  }
+}
+
+@media screen  and (min-width: $bp-small) {
+  .send-msg {
+    width: 70%;
+  }
+}
+
+@media screen  and (min-width: $bp-medium) {
+  .send-msg {
+    width: 552px;
+  }
+}

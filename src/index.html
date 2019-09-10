@@ -8,34 +8,38 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <h1 class="visually-hidden">Forms</h1>
-        <form action="#" method="POST" enctype="multipart/form-data" name="subscription" class="form">
+        <form action="#" method="POST" enctype="multipart/form-data" name="subscription" class="form js-form">
             <h2 class="form__title">Subscription form</h2>
             <div class="form__contact-wrapper">
                 <div class="form__field-wrapper">
                     <label class="visually-hidden" for="name-sub">Name</label>
                     <input class="form__field" type="text" name="name" id="name-sub" placeholder="Name" required>
+                    <span class="form__msg message message--error">Enter your name</span>
+                    <span class="form__msg message message--success"></span>
                 </div>
                 <div class="form__field-wrapper">
                     <label class="visually-hidden" for="email-sub">Email</label>
                     <input class="form__field" type="email" name="email" id="email-sub" placeholder="Email" required>
+                    <span class="form__msg message message--error">Enter your email</span>
+                    <span class="form__msg message message--success"></span>
                 </div>
             </div>
             <fieldset class="form__fieldset">
                 <legend class="">Receive promotions</legend>
                 <div class="form__field-wrapper">
                     <label for="frequency-daily">daily</label>
-                    <input class="" type="radio" name="frequency" id="frequency-daily" value="daily">
+                    <input class="" type="radio" name="frequency" id="frequency-daily" value="daily" checked>
                     <label for="frequency-weekly">weekly</label>
                     <input class="" type="radio" name="frequency" id="frequency-weekly" value="weekly">
                     <label for="frequency-monthly">monthly</label>
                     <input class="" type="radio" name="frequency" id="frequency-monthly" value="monthly">
                 </div>
             </fieldset>
-            <button class="btn form__btn" type="submit">Send</button>
+            <button class="btn form__btn js-submit" type="submit">Send</button>
         </form>
-        <form action="#" method="POST" enctype="multipart/form-data" name="feedback" class="form">
+        <form action="#" method="POST" enctype="multipart/form-data" name="feedback" class="form js-form">
             <fieldset class="form__fieldset">
                 <legend class="form__title">Feedback form</legend>
                 <div class="form__contact-wrapper">
@@ -61,13 +65,31 @@
                 <div class="form__field-wrapper form__field-wrapper--file upload">
                     <label class="form__label" for="file-fdb">Attachment:</label>
                     <div class="upload__wrapper" data-note="Upload" tabindex="0">
-                        <span class="upload__path">No file chosen</span>
+                        <span class="upload__path">Select your file</span>
                         <input class="form__field upload__input" type="file" name="file" id="file-fdb" tabindex="-1">
                     </div>
                 </div>
-                <button class="btn form__btn" type="submit">Send</button>
+                <button class="btn form__btn js-submit" type="submit">Send</button>
             </fieldset>
         </form>
-    </div>
+    </main>
+    <section class="send-msg send-msg-success">
+        <button class="send-msg__close" type="button">Close</button>
+        <div class="send-msg__content">
+            <h2 class="send-msg__title">Thank you!</h2>
+            <p class="send-msg__text">Your message has been received</p>
+        </div>
+    </section>
+    <section class="send-msg send-msg-failure">
+        <button class="send-msg__close" type="button">Close</button>
+        <div class="send-msg__content">
+            <h2 class="send-msg__title">Failed to send your message</h2>
+            <p class="send-msg__text">Please try again later</p>
+        </div>
+    </section>
+    <div class="overlay"></div>
+
+    <script src="js/libs/all-libs.js"></script>
+    <script src="js/all.js"></script>
 </body>
 </html>
