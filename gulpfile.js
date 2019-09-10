@@ -73,7 +73,6 @@ gulp.task('js:libs', function () {
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/inputmask/dist/min/inputmask/inputmask.min.js',
         'node_modules/parsleyjs/dist/parsley.min.js',
-        'node_modules/slick-carousel/slick/slick.min.js',
     ])
         .pipe(plumber())
         .pipe(concat('all-libs.js'))
@@ -126,6 +125,7 @@ gulp.task('build', gulp.series(
         'html',
         'fonts',
         'style',
+        'js:libs',
         'js',
     )
 ));

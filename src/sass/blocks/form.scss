@@ -1,3 +1,237 @@
 .form {
+  display: block;
+  box-sizing: border-box;
+  padding: 20px 26px;
+  padding-bottom: 26px;
   font-size: 16px;
+  line-height: 18px;
+  color: $grey-light;
+  background-color: $white;
+
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  &__title {
+    padding-top: 14px;
+    padding-bottom: 32px;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: $green;
+  }
+
+  &__field-wrapper {
+    position: relative;
+    box-sizing: border-box;
+    padding-bottom: 17px;
+
+    &--textarea {
+      & .message::after {
+        top: 5px;
+        transform: translateY(0);
+      }
+    }
+
+    &--upload {
+      padding-bottom: 28px;
+    }
+
+    &--error {
+      & .message--error {
+        opacity: 1;
+      }
+    }
+
+    &--success {
+      & .message--success {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    padding: 12px 0;
+    padding-left: 37px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 300;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: calc(50% - 2px);
+      transform: translateY(-50%);
+      box-sizing: border-box;
+      border: 1px solid $light-blue;
+      width: 27px;
+      height: 27px;
+      content: "";
+      background-color: $light-blue;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  &__field {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 11px;
+    padding-bottom: 7px;
+    padding-left: 19px;
+    padding-right: 6px;
+    font-size: 17px; // input text
+    line-height: 1;
+    border: 1px solid $grey-field-border;
+    border-radius: 0;
+    appearance: none;
+    z-index: 1;
+
+    &::placeholder {
+      font-size: 17px; // same as input text
+      line-height: 1;
+      font-weight: 300;
+      color: $grey-light;
+    }
+
+    &--textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    &:focus ~ .message {
+      opacity: 0;
+    }
+  }
+
+  &__btn {
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: $bp-medium) {
+  .form {
+    &__title {
+      text-align: center;
+    }
+
+    &__contact-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+
+      & .form__field-wrapper {
+        width: calc(50% - 15px);
+      }
+    }
+
+    &__btn {
+      margin-right: auto;
+    }
+  }
+}
+
+@media screen and (min-width: $bp-large) {
+  .form {
+    &__title {
+      padding-left: 40px;
+      padding-right: 40px;
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    &__label {
+      padding-left: 36px;
+      font-size: 16px;
+      line-height: 20px;
+
+      &::before {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    &__field {
+      &::placeholder {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    &__btn {
+      margin-top: 70px;
+    }
+  }
+}
+
+@media screen and (min-width: $bp-xlarge) {
+  .form {
+    box-sizing: border-box;
+    padding: 30px 42px;
+
+    .form__fieldset {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .form__field-wrapper--name {
+      flex-basis: 50%;
+      padding-right: 12px;
+
+      & .message::after {
+        right: -6px;
+      }
+    }
+
+    .form__field-wrapper--tel {
+      flex-basis: 50%;
+    }
+
+    .form__label {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .form__btn {
+      padding-right: 25px;
+    }
+
+    &__title {
+      padding: 0;
+      padding-bottom: 38px;
+    }
+
+
+    &__field-wrapper {
+      padding-bottom: 17px;
+
+      &--textarea,
+      &--file {
+        width: 100%;
+      }
+    }
+
+    &__field {
+      padding: 8px;
+      padding-top: 11px;
+      padding-left: 20px;
+    }
+
+    &__btn {
+      margin-top: 10px;
+      padding-right: 34px;
+    }
+  }
 }
